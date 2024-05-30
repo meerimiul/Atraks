@@ -4,6 +4,6 @@ static_host: 10.0.0.4
 app_hosts:
   - 10.0.0.2
   - 10.0.0.3
-certbot_email: meerimiuldasheva@yahoo.com
+certbot_email: meerim@yahoo.com
 internal_ip: 10.0.0.1
 external_ip: XX.XX.XX.XX
