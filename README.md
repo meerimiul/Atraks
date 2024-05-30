@@ -12,9 +12,9 @@
 
 # Запуск playbook:
 
-`
+```
 ansible-playbook -i inventory site.yml
-`
+```
 # Этот playbook выполнит следующие шаги:
 
 - Установит Nginx.
