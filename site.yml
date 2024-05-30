@@ -1,0 +1,5 @@
+---
+- hosts: balancer
+  become: yes
+  roles:
+    - nginx

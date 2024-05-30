@@ -1,0 +1,7 @@
+---
+domain: admin-test.atrucks.su
+static_host: 10.0.0.4
+app_hosts:
+  - 10.0.0.2
+  - 10.0.0.3
+certbot_email: meerimiuldasheva@yahoo.com

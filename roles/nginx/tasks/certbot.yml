@@ -1,0 +1,19 @@
+---
+- name: Install Certbot
+  apt:
+    name: certbot
+    state: present
+    update_cache: yes
+
+- name: Obtain SSL certificates using Certbot
+  command: >
+    certbot certonly --nginx --non-interactive --agree-tos
+    --email {{ certbot_email }}
+    -d {{ domain }}
+  notify:
+    - Reload Nginx
+
+- name: Setup Certbot auto-renewal
+  cron:
+    name: "Renew Let's Encrypt certificates"
+    job: "0 3 * * * /usr/bin/certbot renew --quiet && systemctl reload nginx"
